@@ -29,6 +29,7 @@ and ask for input conversion from "C, K or F"""
 # calculate conversion
 # display input1 + " = " calculation_output + input2
 # ask if they want to do it again
+# bye bye
 
 do_again = "y"
 
