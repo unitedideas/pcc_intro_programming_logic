@@ -6,11 +6,8 @@ __author__ = 'Shane Cheek'
 # score1, score2, score3
 
 # output:
-# display the sums of the 3 inputs
-# display the % score
-
-# process:
-# add inputs as they aer entered
+# sums of the 3 inputs
+# % score
 
 # declare variables:
 list_of_assignments = []
