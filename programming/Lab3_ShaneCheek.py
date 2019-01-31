@@ -9,6 +9,8 @@ __author__ = 'Shane Cheek'
 # outputs:
 #   open_mail, relax
 
+Declare
+
 
 # Module main()
 #
@@ -38,7 +40,7 @@ __author__ = 'Shane Cheek'
 #   declare percent_score
 
 # End Module
-#####
+
 
 def display_score(score, max_score, percent):
     print('Your score is ' + str(score) + ' of ' + str(max_score), 'You scored a ' + str(percent) + '%')
@@ -69,7 +71,6 @@ def calc_percent(score, max_score):
 
 
 def main():
-    # declare variables:
     list_of_assignments = []
     score = 0.0
     percent_score = 0.0

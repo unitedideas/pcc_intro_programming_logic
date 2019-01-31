@@ -21,7 +21,7 @@ __author__ = "Shane Cheek"
 #
 # Input unit_from
 #
-# Remove unit_from from unit_options
+# Set unit_options to the remaining two units != unit_from
 #
 # Display Enter a quantity. \n
 #
