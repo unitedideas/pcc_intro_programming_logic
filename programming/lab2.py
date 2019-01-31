@@ -1,9 +1,7 @@
 __author__ = "Shane Cheek"
 
-# inputs:
-# unit_from, qty_from, unit_to
-# output:
-# Display "str(qty_from) + " " + str(unit_from) + " = " + str(conversion) + " " + str(unit_to)"
+# inputs: unit_from, qty_from, unit_to
+# output: Display "str(qty_from) + " " + str(unit_from) + " = " + str(conversion) + " " + str(unit_to)"
 
 
 # Declare List unit_options
