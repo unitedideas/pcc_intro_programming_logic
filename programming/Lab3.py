@@ -17,10 +17,8 @@ __author__ = 'Shane Cheek'
 #
 #     If junk_or_not == 'yes'
 #         Display 'Throw it away!'
-#         Call is_more_mail()
 #     Else
 #         Display 'Open it and read it.'
-#         Call is_more_mail()
 # End Module
 
 # Module output_relax()
@@ -51,10 +49,8 @@ def junk_mail():
 
     if junk_or_not == 'yes':
         print('Throw it away!')
-        is_more_mail()
     else:
         print('Open it and read it.')
-        is_more_mail()
 
 def output_relax():
     print('Go do your Intro to Programming Logic homework')
