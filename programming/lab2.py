@@ -37,7 +37,6 @@ __author__ = "Shane Cheek"
 
 
 
-
 unit_options = []
 unit_from = ''
 qty_from = 0.0
