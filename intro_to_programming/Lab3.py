@@ -1,5 +1,6 @@
 __author__ = 'Shane Cheek'
 
+
 # Description:
 # Program helps decide what to do if you have unopened mail or junk mail.
 
@@ -43,6 +44,7 @@ __author__ = 'Shane Cheek'
 def output_get_next_mail():
     print('Get the next piece of mail.')
 
+
 def junk_mail():
     junk_or_not = ''
     junk_or_not = input('Is it junk mail?')
@@ -52,8 +54,10 @@ def junk_mail():
     else:
         print('Open it and read it.')
 
+
 def output_relax():
     print('Go do your Intro to Programming Logic homework')
+
 
 def is_more_mail():
     is_more_mail = ''
@@ -64,8 +68,10 @@ def is_more_mail():
     else:
         output_relax()
 
+
 def main():
     is_more_mail()
+
+
 if __name__ == '__main__':
     main()
-
