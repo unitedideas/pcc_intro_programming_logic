@@ -1,8 +1,9 @@
+import lab4
 import unittest
 
-def fun(x):
-    return x + 1
 
-class MyTest(unittest.la):
+
+class MyTest(unittest.TestCase):
+
     def test(self):
-        self.assertEqual(fun(3), 4)
+        self.assertEqual(lab4.junk_mail(), 'yes')
