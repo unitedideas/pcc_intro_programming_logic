@@ -13,7 +13,7 @@ inputs:
 
 '''
 outputs:
-    output_relax(), junk_mail()
+    relax(), junk_mail()
 '''
 
 '''
@@ -28,7 +28,7 @@ Module junk_mail():
         Display 'Open it and read it.'
 
 
-Module output_relax():
+Module relax():
     Display 'Go do your Intro to Programming Logic homework'
 
 
@@ -47,7 +47,7 @@ Module main():
     Set Bool have_mail = True
     While have_mail is True:
         Set have_mail = is_more_mail()
-    Call output_relax()
+    Call relax()
 '''
 
 
@@ -62,7 +62,7 @@ def junk_mail():
         print('Open it and read it.')
 
 
-def output_relax():
+def relax():
     print('Go do your Intro to Programming Logic homework')
 
 
@@ -80,7 +80,7 @@ def main():
     have_mail = True
     while have_mail:
         have_mail = is_more_mail()
-    output_relax()
+    relax()
 
 
 if __name__ == '__main__':
