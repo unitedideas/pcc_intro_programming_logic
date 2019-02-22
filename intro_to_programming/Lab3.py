@@ -1,54 +1,61 @@
 __author__ = 'Shane Cheek'
 
+'''
+Description:
+    Program helps decide what to do if you have unopened mail
+    and/or if that mail is junk mail.
+'''
 
-# Description:
-# Program helps decide what to do if you have unopened mail or junk mail.
+'''
+inputs:
+    is_more_mail, junk_or_not
+'''
 
-# inputs: is_more_mail, junk_or_not
+'''
+outputs:
+    output_relax(), junk_mail()
+'''
 
-# outputs: output_relax(), junk_mail()
+'''
+Module junk_mail():
+    Declare String junk_or_not = ''
+    Set String junk_or_not = input('Is it junk mail?')
+    While junk_or_not is not 'no' AND junk_or_not is not 'yes':
+        Set String junk_or_not = input('Is it junk mail?')
+    If junk_or_not == 'yes':
+        Display 'Throw it away!'
+    Else:
+        Display 'Open it and read it.'
 
-# Module output_get_next_mail()
-#     Display 'Get the next piece of mail.'
 
-# Module junk_mail()
-#     Declare String junk_or_not = ''
-#     Display 'Is it junk mail?'
-#     Input junk_or_not
-#
-#     If junk_or_not == 'yes'
-#         Display 'Throw it away!'
-#     Else
-#         Display 'Open it and read it.'
-# End Module
+Module output_relax():
+    Display 'Go do your Intro to Programming Logic homework'
 
-# Module output_relax()
-#     Display 'Go do your Intro to Programming Logic homework'
-# End Module
 
-# Module is_more_mail()
-#     Declare String is_more_mail
-#     Display Do you have mail?
-#     Input is_more_mail
-#     If is_more_mail == 'yes' Then
-#         Call output_get_next_mail()
-#         Call junk_mail()
-#     Else
-#         Call output_relax()
-# End Module
+Function Bool is_more_mail():
+    Declare String have_mail = ''
+    Set String have_mail = input('Do you have mail?')
+    While have_mail is not 'no' and have_mail is not 'yes':
+        Set String have_mail = input('Do you have mail?')
+    If have_mail == 'yes':
+        Call junk_mail()
+        Return True
 
-# Module main()
-#     Call is_more_mail()
-# End Module
 
-def output_get_next_mail():
-    print('Get the next piece of mail.')
+Module main():
+    Declare have_mail = ''
+    Set Bool have_mail = True
+    While have_mail is True:
+        Set have_mail = is_more_mail()
+    Call output_relax()
+'''
 
 
 def junk_mail():
     junk_or_not = ''
     junk_or_not = input('Is it junk mail?')
-
+    while junk_or_not != 'no' and junk_or_not != 'yes':
+        junk_or_not = input('Is it junk mail?')
     if junk_or_not == 'yes':
         print('Throw it away!')
     else:
@@ -60,17 +67,20 @@ def output_relax():
 
 
 def is_more_mail():
-    is_more_mail = ''
-    is_more_mail = input('Do you have mail?')
-    if is_more_mail == 'yes':
-        output_get_next_mail()
+    have_mail = input('Do you have mail?')
+    while have_mail != 'no' and have_mail != 'yes':
+        have_mail = input('Do you have mail?')
+    if have_mail == 'yes':
         junk_mail()
-    else:
-        output_relax()
+        return True
 
 
 def main():
-    is_more_mail()
+    have_mail = ''
+    have_mail = True
+    while have_mail:
+        have_mail = is_more_mail()
+    output_relax()
 
 
 if __name__ == '__main__':
