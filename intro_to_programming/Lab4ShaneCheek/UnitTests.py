@@ -1,6 +1,5 @@
-import lab4
 import unittest
-
+import lab4
 
 
 class MyTest(unittest.TestCase):
