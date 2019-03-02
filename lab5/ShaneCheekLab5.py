@@ -15,14 +15,19 @@
 
 
 # From time Import sleep
-#
 # From turtle Import All
-#
+from time import sleep
+
+from turtle import *
+
 # Declare String name = ''
 # Declare Array first_last_name_list = []
 # Declare Array name_chr_list = []
-#
-#
+name = ''
+first_last_name_list = []
+name_chr_list = []
+
+
 # Function String letter_not_in_ascii()
 #     Declare String first_name = ''
 #     Declare String last_name = ''
@@ -37,14 +42,33 @@
 #         End If
 #      End While
 # End Function
-#
+def letter_not_in_ascii():
+    """Input validation"""
+    first_name = ''
+    last_name = ''
+    while True:
+        first_name = input('First Name: ')
+        last_name = input('Last Name: ')
+        name = first_name + " " + last_name
+        if first_name and last_name != '':
+            return name
+        else:
+            print('Please enter a letters')
+
+
 # Function Array name_to_list(Array first_last_name_list)
 #     For name in first_last_name_list:
 #         name_chr_list.append(list(name))
 #     End For
 #     Return name_chr_list
 # End Function
-#
+def name_to_list(first_last_name_list):
+    """Set the full name list"""
+    for name in first_last_name_list:
+        name_chr_list.append(list(name))
+    return name_chr_list
+
+
 # Function Int name_total(Array name_chr_list)
 #     ascii_name_total = 0
 #     For name in name_chr_list:
@@ -54,8 +78,15 @@
 #     End For
 #     Return ascii_name_total
 # End Function
+def name_total(name_chr_list):
+    """Total of all ascii characters in name"""
+    ascii_name_total = 0
+    for name in name_chr_list:
+        for character in name:
+            ascii_name_total += ord(character)
+    return ascii_name_total
 
-#
+
 # Module display_name_ascii(Array name_chr_list)
 #     ascii_name_total = name_total(name_chr_list)
 #     For name in name_chr_list:
@@ -64,7 +95,15 @@
 #     End For
 #     Display(ascii_name_total, ":", chr(ascii_name_total))
 # End Module
-#
+def display_name_ascii(name_chr_list):
+    """Print each character and ascii value"""
+    ascii_name_total = name_total(name_chr_list)
+    for name in name_chr_list:
+        for character in name:
+            print(character, ":", ord(character))
+    print(ascii_name_total, ":", chr(ascii_name_total))
+
+
 # Module turtle_time(name_chr_list, an_total)
 #     Declare Int window_width = 0
 #     Decalre Int start_marker_y = 0
@@ -116,56 +155,6 @@
 # Call display_name_ascii(name_chr_list)
 #
 # Call turtle_time(name_chr_list, name_total(name_chr_list))
-
-
-from time import sleep
-
-from turtle import *
-
-name = ''
-first_last_name_list = []
-name_chr_list = []
-
-
-def letter_not_in_ascii():
-    """Input validation"""
-    first_name = ''
-    last_name = ''
-    while True:
-        first_name = input('First Name: ')
-        last_name = input('Last Name: ')
-        name = first_name + " " + last_name
-        if first_name and last_name != '':
-            return name
-        else:
-            print('Please enter a letters')
-
-
-def name_to_list(first_last_name_list):
-    """Set the full name list"""
-    for name in first_last_name_list:
-        name_chr_list.append(list(name))
-    return name_chr_list
-
-
-def name_total(name_chr_list):
-    """Total of all ascii characters in name"""
-    ascii_name_total = 0
-    for name in name_chr_list:
-        for character in name:
-            ascii_name_total += ord(character)
-    return ascii_name_total
-
-
-def display_name_ascii(name_chr_list):
-    """Print each character and ascii value"""
-    ascii_name_total = name_total(name_chr_list)
-    for name in name_chr_list:
-        for character in name:
-            print(character, ":", ord(character))
-    print(ascii_name_total, ":", chr(ascii_name_total))
-
-
 def turtle_time(name_chr_list, an_total):
     """Draws pictogram to the screen for each character in the list"""
     window_width = 0
@@ -189,7 +178,7 @@ def turtle_time(name_chr_list, an_total):
             for count in range(ord(character)):
                 pen.forward(count)
                 pen.left(ord(character))
-            start_marker_x += (window_width*2 / len(name))
+            start_marker_x += (window_width * 2 / len(name))
         start_marker_y += -200
     sleep(1.5)
     pen.screen.clear()
