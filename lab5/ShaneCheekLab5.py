@@ -38,7 +38,7 @@ name_chr_list = []
 #         If first_name and last_name != '' then
 #             Return name
 #         Else:
-#             Display 'Please enter a letters'
+#             Display 'You just enter a first and last name.'
 #         End If
 #      End While
 # End Function
@@ -53,7 +53,7 @@ def letter_not_in_ascii():
         if first_name and last_name != '':
             return name
         else:
-            print('Please enter a letters')
+            print('You just enter a first and last name.')
 
 
 # Function Array name_to_list(Array first_last_name_list)
@@ -186,7 +186,7 @@ def turtle_time(name_chr_list, an_total):
 
     pen.goto(0, 0)
 
-    for count in range(int(an_total / 3.5)):
+    for count in range(int(an_total / 2)):
         pen.color('blue')
         pen.forward(count)
         pen.left(an_total)
