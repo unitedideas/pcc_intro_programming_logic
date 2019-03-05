@@ -186,7 +186,7 @@ def turtle_time(name_chr_list, an_total):
 
     pen.goto(0, 0)
 
-    for count in range(int(an_total / 2)):
+    for count in range(int(an_total / 3)):
         pen.color('blue')
         pen.forward(count)
         pen.left(an_total)
