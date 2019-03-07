@@ -1,13 +1,13 @@
 # # 10 and 11
-counter = 1
-while counter < 10:
-    counter += 2
-    print(counter)
+# counter = 1
+# while counter < 10:
+#     counter += 1
+#     print(counter)
 
-
+#
 # def halve(n):
-#     half = n / 2
-#     return half
+#     half = int(n) / 2
+#     return int(half)
 #
 #
 # def log2(n):
@@ -18,11 +18,11 @@ while counter < 10:
 #     return lg2
 #
 #
-# def main():
-#     print(log2(8))
-#     print(log2(4))
-#     print(log2(1))
-#     print(log2(13))
+#
+# print(log2(8))
+# print(log2(4))
+# print(log2(1))
+# print(log2(13))
 
 #
 # def perfect(n):
@@ -49,13 +49,13 @@ while counter < 10:
 # def main():
 #     print(perfect_sum(5))
 
-#
+
 # def loop_rule(n):
 #     if n % 2 == 0:
 #         n = n / 2
 #     else:
 #         n = n * 3 + 1
-#         print(n)
+#     print(n)
 #     return n
 #
 #
@@ -68,7 +68,7 @@ while counter < 10:
 #
 #
 # print(loop(3))
-
+#
 
 # def fibo(n):
 #     first = 1
@@ -103,5 +103,9 @@ while counter < 10:
 #         print(fibo_2(counter))
 #
 # loop(6)
+#
+# boollist = [0, None, False, True]
+# for name in boollist:
+#     print(type(name))
 
-
+print(18.5/25)
