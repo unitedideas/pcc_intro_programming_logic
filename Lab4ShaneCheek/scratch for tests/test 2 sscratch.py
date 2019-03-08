@@ -108,4 +108,4 @@
 # for name in boollist:
 #     print(type(name))
 
-print(18.5/25)
+# print(18.5/25)
