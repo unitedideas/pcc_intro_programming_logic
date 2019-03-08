@@ -83,7 +83,7 @@ def dog_owner():
             print(str(dog_name).title(), 'is not in the dog park ')
 
 
-def options_list(command=False):
+def options_list(commands=''):
     options = {
         'add': 'Add a dog to the dog park.',
         'remove': 'Remove a dog from the dog park.',
@@ -92,13 +92,13 @@ def options_list(command=False):
         'owner': 'Check the owner of a dog',
         'options': 'Get your options'
     }
-    if not command:
+    if not commands:
         print('Your options are:')
         for option, instruction in options.items():
             print(option + ':', instruction)
-    elif command in options:
-        print(options[command])
-        return command
+    elif commands in options:
+        print(options[commands])
+        return commands
 
 
 def command_option():
