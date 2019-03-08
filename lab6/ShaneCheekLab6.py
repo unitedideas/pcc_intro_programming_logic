@@ -106,6 +106,7 @@ def command_option():
     if options_list(user_select_option):
         return user_select_option
 
+
 options_list()
 
 while True:
