@@ -92,12 +92,11 @@ def options_list(commands=''):
         'owner': 'Check the owner of a dog',
         'options': 'Get your options'
     }
-    if not commands:
+    if commands not in options:
         print('Your options are:')
         for option, instruction in options.items():
-            print(option + ':', instruction)
+            print('\t' + option + ':', instruction)
     elif commands in options:
-        print(options[commands])
         return commands
 
 
@@ -107,6 +106,11 @@ def command_option():
         return user_select_option
 
 
+def intro():
+    print('You are the dog park monitor.\nYou must add and remove dogs to the dog park list as they come and go.\n')
+
+
+intro()
 options_list()
 
 while True:
