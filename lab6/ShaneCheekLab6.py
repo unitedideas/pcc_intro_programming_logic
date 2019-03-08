@@ -16,13 +16,6 @@ __author__ = "Shane Cheek"
 
 # Output:
 
-options = {
-    'add': 'Add a dog to the dog park.',
-    'remove': 'Remove a dog from the dog park.',
-    'print': 'Print all dogs in the dog park.',
-    'quit': 'Quit the program',
-    'owner': 'Check the owner of a dog'
-}
 
 dogInstanceList = {}
 
@@ -90,24 +83,47 @@ def dog_owner():
             print(str(dog_name).title(), 'is not in the dog park ')
 
 
-def command_option():
-    return input('What would you like to do? Add, Remove, Print, Quit, Owner ').lower()
+def options_list(command=False):
+    options = {
+        'add': 'Add a dog to the dog park.',
+        'remove': 'Remove a dog from the dog park.',
+        'print': 'Print all dogs in the dog park.',
+        'quit': 'Quit the program',
+        'owner': 'Check the owner of a dog',
+        'options': 'Get your options'
+    }
+    if not command:
+        print('Your options are:')
+        for option, instruction in options.items():
+            print(option + ':', instruction)
+    elif command in options:
+        print(options[command])
+        return command
 
+
+def command_option():
+    user_select_option = input('\nWhat would you like to do?\n').lower()
+    if options_list(user_select_option):
+        return user_select_option
+
+options_list()
 
 while True:
     command = command_option()
 
-    if command in options:
-        if command == 'quit':
-            break
-        elif command == 'print':
-            print_dog()
+    if command == 'quit':
+        break
+    elif command == 'print':
+        print_dog()
 
-        elif command == 'add':
-            add_dog()
+    elif command == 'add':
+        add_dog()
 
-        elif command == 'remove':
-            remove_dog()
+    elif command == 'remove':
+        remove_dog()
 
-        elif command == 'owner':
-            dog_owner()
+    elif command == 'owner':
+        dog_owner()
+
+    elif command == 'options':
+        options_list()
