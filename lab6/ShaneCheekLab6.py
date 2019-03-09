@@ -21,11 +21,7 @@ dogInstanceList = {}
 
 
 class Dog:
-    # def __init__(self, name='unknown', owner='unknown'):
-    #     self.__name = name
-    #     self.__owner = owner
-
-    def setter(self, name, owner='unknown'):
+    def setter(self, name, owner):
         self.__name = name
         self.__owner = owner
 
@@ -110,25 +106,30 @@ def intro():
     print('You are the dog park monitor.\nYou must add and remove dogs to the dog park list as they come and go.\n')
 
 
-intro()
-options_list()
+def main():
+    intro()
+    options_list()
 
-while True:
-    command = command_option()
+    while True:
+        command = command_option()
 
-    if command == 'quit':
-        break
-    elif command == 'print':
-        print_dog()
+        if command == 'quit':
+            break
+        elif command == 'print':
+            print_dog()
 
-    elif command == 'add':
-        add_dog()
+        elif command == 'add':
+            add_dog()
 
-    elif command == 'remove':
-        remove_dog()
+        elif command == 'remove':
+            remove_dog()
 
-    elif command == 'owner':
-        dog_owner()
+        elif command == 'owner':
+            dog_owner()
 
-    elif command == 'options':
-        options_list()
+        elif command == 'options':
+            options_list()
+
+
+if __name__ == '__main__':
+    main()
