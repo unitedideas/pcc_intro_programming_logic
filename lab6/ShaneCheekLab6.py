@@ -16,7 +16,6 @@ __author__ = "Shane Cheek"
 
 # Output:
 
-
 dogInstanceList = {}
 
 
