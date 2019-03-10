@@ -267,4 +267,5 @@ def main():
             options_list()
 
 
+# Call main()
 main()
