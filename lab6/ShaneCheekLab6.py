@@ -19,6 +19,7 @@ __author__ = "Shane Cheek"
 dogInstanceList = {}
 
 
+
 class Dog:
     def setter(self, name, owner):
         self.__name = name
